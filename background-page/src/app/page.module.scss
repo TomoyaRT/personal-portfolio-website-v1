@@ -1,0 +1,59 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #000000;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.25rem;
+  color: #333333;
+  text-align: center;
+  margin: 0 0 3rem 0;
+  max-width: 600px;
+}
+
+.canvasContainer {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+
+  > div {
+    width: 100% !important;
+    height: 100% !important;
+
+    > div {
+      > canvas {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 90vw;
+    height: 90vw;
+    max-width: 500px;
+    max-height: 500px;
+  }
+}
